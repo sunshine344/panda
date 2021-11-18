@@ -1,0 +1,92 @@
+body{
+    background: url('../static/image/bg-2.jpg') no-repeat -105px -20px;
+}
+.container {
+    width: 600px;
+    margin: 50px auto;
+}
+
+/* 清浮动 */
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* 浮动 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+#userMessage {
+    text-align: center;
+    background: rgba(233, 235, 142, 0.5);
+    padding-bottom: 20px;
+    .logo {
+        margin-left: 50px;
+        margin-bottom: 20px;
+        height: 80px;
+        line-height: 80px;
+        padding: 20px;
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 20px;
+        }
+        h2{
+            color: rgb(51, 34, 2);
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+    input{
+        width: 300px;
+        height: 30px;
+        margin-top: 10px;
+        border: none;
+    }
+    .text{
+        
+        margin-top: 10px;
+        color: rgb(245, 86, 86);
+        font-size: 12px;
+        height: 20px;
+    }
+    
+    .loginBtn{
+        display: block;
+        width: 350px;
+        margin-left: 125px;
+        background: rgb(219, 185, 89);
+        color: #fff;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .registerBtn{
+        background: rgba(163, 149, 149,0);
+        text-decoration: underline;
+        font-size: 14px;
+        width: 100px;
+        color: rgb(205, 151, 90);
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .goShopping{
+        font-size: 14px;
+        color: rgb(205, 151, 90);
+        text-decoration: underline;
+    }
+
+}

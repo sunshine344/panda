@@ -1,0 +1,13 @@
+#nav {
+    ul {
+        :nth-child(1),:nth-child(2),:nth-child(3){
+            background: #43240c;
+            color: #fff;
+        }
+        :nth-child(4) {
+            /* 导航选中时的样式 */
+            background-color: #fee44e;
+            color: #43200c;
+        }
+    }
+}

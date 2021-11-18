@@ -1,0 +1,11 @@
+@charset "UTF-8";
+#nav ul :nth-child(1), #nav ul :nth-child(2), #nav ul :nth-child(4) {
+  background: #43240c;
+  color: #fff;
+}
+
+#nav ul :nth-child(3) {
+  /* 导航选中时的样式 */
+  background-color: #fee44e;
+  color: #43200c;
+}

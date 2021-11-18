@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <!-- 引入重置样式 reset.css-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 引入首页样式 index.css-->
+    <link rel="stylesheet" href="../css/index.min.css">
+    <!-- 引入首页样式 detail.css-->
+    <link rel="stylesheet" href="../css/datail.min.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header" class="clearfix">
+        <div class="container">
+            <!-- logo 图片和文字 -->
+            <a href="#" class="logo clearfix fl">
+                <img src="../static/image/logo.png" alt="logo" class="fl">
+                <div class="text fl">
+                    <h3>熊猫优选</h3>
+                    <p>XIONG MAO YOU XUAN</p>
+                </div>
+            </a>
+            <!-- 搜索框 -->
+            <div class="seachBox fl">
+                <form action="">
+                    <input type="text" placeholder="搜索商品，发现更多优惠">
+                    <button>搜索</button>
+                </form>
+            </div>
+            <!-- 全程包邮 七天退换 品质保证 -->
+            <div class="right fr">
+                <div>
+                    <img src="../static/image/mail.png" alt="全程包邮">
+                    <p>全程包邮</p>
+                </div>
+                <div>
+                    <img src="../static/image/return.png" alt="全程包邮">
+                    <p>七天退换</p>
+                </div>
+                <div>
+                    <img src="../static/image/quality.png" alt="全程包邮">
+                    <p>品质保证</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 导航 -->
+    <div id="nav">
+        <ul class="container clearfix">
+            <li class="first active">首页</li>
+        </ul>
+    </div>
+    <div id="main" class="container">
+        <!-- 上部分 -->
+        <div class="content-top">
+            <div class="top-left">
+                <!-- 放大镜 -->
+
+            </div>
+            <!-- 商品信息介绍 -->
+            <div class="top-text">
+
+            </div>
+            <!-- 店铺信息 -->
+            <div class="top-shop">
+
+            </div>
+        </div>
+
+        <!-- 下部分 -->
+        <div class="content-bottom">
+
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div id="footer">
+        <div class="container">
+            <div class="top">
+                <div class="left">
+                    <img src="../static/image/icon.png" alt="logo">
+                    <div class="text">
+                        <h3>熊猫优选</h3>
+                        <p>年轻人网购首选</p>
+                        <p>购物领券更省钱</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <span>|</span>
+                    <a href="#">下载APP</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <span><img src="../static/image/policeIcon.png" alt="">&nbsp;浙公安网备案 33010602009949号 | ICP备案号:</span>
+                <a href="#">浙ICP备17012864号-1</a>
+                <span>|&nbsp;<img src="../static/image/license.png" alt=""></span>
+                <a href="#">证件信息</a>
+            </div>
+        </div>
+    </div>
+    <!-- 全国安全，可信网站 -->
+    <div id="security" class="container">
+        <img src="../static/image/aqkx_83x30.png" alt="">
+    </div>
+    <!-- 回到顶部 -->
+    <div id="backTop" onclick="backTop()">
+        <img src="../static/image/goTopBtn.png" alt="回到顶部">
+    </div>
+    <!-- 放大镜 -->
+    <script type="text/html" id="getglass">
+        <div class="glass">
+            <div class="moveRange">
+                <div class="move"></div>
+                <ol class="topPic">
+                    {{each detailproduct}}
+                    <li><img src="{{$value.url}}" alt="图1"></li>
+                    {{/each}}
+                </ol>
+            </div>
+            <ul class="glass-min">
+                {{each detailproduct}}
+                <li><img src="{{$value.url}}" alt="图1"></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="bigBox">
+            <img alt="图1" class="bigPic" src="{{img}}">
+        </div>
+    </script>
+    <!-- 文字描述 -->
+    <script type="text/html" id="getText">
+        <div class="top-title">
+            <span class="top-logo">
+                <img src="../static/image/taologo.png" alt="">
+            </span>
+            <span>包邮</span>
+            <div class="detail-message">{{title}}</div>
+        </div>
+        <div class="top-money">
+            <p class="original-price">原价{{tbOriginPrice}}</p>
+            <div class="ticket">券后价:￥<span>{{price}}</span><span>{{couponValue}}</span></div>
+            <p>{{saleNum}}万人已买</p>
+        </div>
+        <div class="time">优惠有效期：<span>{{expireDate}}</span></div>
+        <button class="join-cart">加入购物车</button>
+        <button class="buy">领券购买</button>
+    </script>
+    <!-- 商家信息 -->
+    <script type="text/html" id="getshop">
+        <div class="shop-content">
+            <span class="line"></span>
+            <span class="shop-msg">卖家信息</span>
+            <span class="line"></span>
+        </div>
+        <img src="{{picUrl}}" alt="">
+        <p class="shop-name">{{nickname}}</p>
+        <div class="shop-score">
+            <ul class="charater">
+                <li>描述</li>
+                <li>服务</li>
+                <li>物流</li>
+            </ul>
+            <ul class="score">
+                <li>{{itemScore}}</li>
+                <li>{{serviceScore}}</li>
+                <li>{{deliveryScore}}</li>
+            </ul>
+        </div>
+    </script>
+    <!-- 图片详情介绍 -->
+    <script type="text/html" id="imgdetail">
+        {{each imgs}}
+        <img src="{{$value.url}}" alt="" class="shop-img">
+        {{/each}}
+    </script>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../lib/template-web.js"></script>
+    <script src="../js/detail.js"></script>
+</body>
+
+</html>

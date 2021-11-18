@@ -1,0 +1,301 @@
+
+.addBorder{
+    border: 2px solid rgb(161, 66, 240);
+}
+
+#nav{
+    ul{
+        li{
+            background-color: #fee44e;
+            color: #43200c;
+        }
+    }
+}
+
+#main {
+
+    /* 上部分 */
+    .content-top {
+        width: 100%;
+        height: 380px;
+        position: relative;
+
+        .top-left {
+            width: 282px;
+            background: #fff; 
+            .glass {
+                background: #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                .moveRange {
+                    position: relative;
+                    margin-top: 10px;
+                    .move {
+                        width: 150px;
+                        height: 150px;
+                        background-color: rgba(177, 108, 233, 0.5);
+                        position: absolute;
+                        cursor: pointer;
+                        pointer-events: none;
+                        display: none;
+                    }
+
+                    .topPic {
+                        width: 282px;
+                        height: 282px;
+                        display: flex;
+                        .dynamic{
+                            display: block;
+                        }
+                        li {
+                            
+                            display: none;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                ul{
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    li{
+                        
+                        width: 50px;
+                        height: 50px;
+                        img{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+
+                   }
+            }
+            .bigBox{
+                z-index: 5;
+                width: 358px;
+                height:358px;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: 302px;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        .top-text{
+            position: absolute;
+            top: 0;
+            left: 282px;
+            width: 594px;
+            height: 364px;
+            background: #fff;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 80px;
+            .top-title{
+                height: 72px;
+                width: 530px;
+                .top-logo{
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                :nth-child(2){
+                    width: 42px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    display: inline-block;
+                    border: 1px solid rgb(197, 196, 196);
+                    color: rgb(165, 164, 164);
+                    border-radius: 3px;
+                }
+                .detail-message{
+                    display: inline-block;
+                    font-size: 24px;
+                    line-height: 33px;
+                    color: #43240c;
+                }
+            }
+            .top-money{
+                position: relative;
+                margin-top: 20px;
+                box-sizing: border-box;
+                padding: 10px;
+                width: 530px;
+                height: 87px;
+                background-color: #f5f5f5;
+                margin-bottom: 40px;
+                .original-price{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #b1a9a5;
+                    line-height: 22px;
+                    text-decoration: line-through;
+                }
+                .ticket{
+                    margin-top: 10px;
+                    font-size: 20px;
+                    color: #ff4653;
+                    line-height: 28px;
+                    :nth-child(1){
+                        font-size: 40px;
+                        font-weight: 600;
+                        color: #fa585a;
+                        line-height: 28px;
+                    }
+                    :nth-child(2){
+                        display: inline-block;
+                        height: 16px;
+                        background: #feeeee;
+                        border-radius: 2px;
+                        border: 1px solid #fa585a;
+                        font-size: 12px;
+                        text-align: center;
+                        line-height: 17px;
+                        margin-bottom: 4px;
+                        margin-left: 10px;
+                        vertical-align: middle;
+                    }
+                }
+                :nth-child(3){
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #b1a9a5;
+                    line-height: 22px;
+                    vertical-align: middle;
+                    margin-top: 16px;
+                    margin-right: 27px;
+                }
+            }
+            .time{
+                font-size: 14px;
+                color: #fa585a;
+                line-height: 20px;
+                position: absolute;
+                right: 35px;
+                
+            }
+            button{
+                
+                cursor: pointer;
+                width: 180px;
+                height: 50px;
+                border: none;
+                border-radius: 4px;
+                font-size: 18px;
+                color: #fff;
+                line-height: 25px;
+                margin-top: 18px;
+                margin-bottom: 39px;
+                display: block;
+                background-color: rgb(250, 88, 90)
+                
+            }
+            .join-cart{
+                position: absolute;
+                bottom: 0;
+                left: 180px;
+            }
+            .buy{
+                position: absolute;
+                bottom: 0;
+                right: 35px;
+            }
+        }
+        .top-shop{
+            float: right;
+            width: 275px;
+            height: 352px;
+            background: #fff;
+            border: 1px solid #fee44e;
+            text-align: center;
+            .shop-content{
+                display: block;
+                line-height: 31.5px;
+                width: 273px;
+                height: 63px;
+                margin: 1px 0;
+                background: linear-gradient(180deg,#fee44e,#fff 85%,#fff);
+                .line{
+                    display: inline-block;
+                    width: 56px;
+                    height: 1px;
+                    opacity: .2;
+                    background: #43240c;
+                    vertical-align: middle;
+                }
+                .shop-msg{
+                    font-size: 14px;
+                    color: #43240c;
+                    vertical-align: middle;
+                }
+            }
+            img{
+                width: 150px;
+                height: 150px;
+                margin: 3px auto 0;
+            }
+            .shop-name{
+                font-size: 18px;
+                color: #43240c;
+                line-height: 25px;
+                text-align: center;
+            }
+            .shop-score{
+                width: 168px;
+                height: 44px;
+                margin: 9px auto 17px;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        flex: 1;
+                        text-align: center;
+                    }
+                }
+                .charater{
+                    font-size: 14px;
+                    color: #b1a9a5;
+                    line-height: 20px;
+                    
+                }
+                .score{
+                    font-size: 14px;
+                    color: #fb9547;
+                    line-height: 20px;
+                }
+            }
+            
+            
+        }
+    }
+
+    /* 下部分 */
+    .content-bottom{
+        width: 1200px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        .shop-img{
+           width: 880px;
+        }
+    }
+}

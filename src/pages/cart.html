@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cart.min.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <div class="container clearfix">
+            <img src="../static/image/logo.png" alt="logo" class="fl">
+            <h2 class="fl">我的购物车</h2>
+            <p class="fl">温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+            <div class="fr">
+                <a class="login" class="fl" href="../pages/login.html">登录</a>
+                <a class="register" class="fl" href="../pages/register.html">注册</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- 商品显示区域 -->
+    <div id="product-show" class="container">
+        <table>
+            <!-- 购物车节点： 遍历购物车数据，生成购物车节点，作为内容添加给tabel -->
+
+        </table>
+
+    </div>
+    <!-- 结算 -->
+    <div id="settlement" class="container">
+        <div class="wrap clearfix">
+            <span class="shopping">继续购物</span>
+            <!-- 共
+            <span>7</span>件商品，已选择
+            <span>3</span>件 -->
+            <span class="fr">
+                合计:<span class="totalPrice">0</span>元
+                <button>去结算</button>
+            </span>
+        </div>
+    </div>
+    <script type="text/html" id="cartproduct">
+        <tr>
+            <th><input type="checkbox" class="checkbox-all" {{checkedAllState ? 'checked' : ''}}></th>
+            <th>商品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+        {{each carts}}
+        <tr>
+            <td><input type="checkbox" class="checkbox-item" {{$value.state ? 'checked' : ''}} data-index="{{$index}}">
+            </td>
+            <td class="title"><img src="{{$value.image}}" alt=""><span>{{$value.qunTitle}}</span></td>
+            <td class="price">{{$value.price}}</td>
+            <td><input type="button" name="minus" value="-" {{$value.num==0 ? 'disabled' : ''}} data-index="{{$index}}">
+                <input type="text" name="amount" value="{{$value.num}}" data-index="{{$index}}"><input type="button"
+                    name="plus" value="+" data-index="{{$index}}"></td>
+            <td class="singleprice" width="100px">{{$value.singleprice}}</td>
+            <td><a class="deleteBtn" href="#" data-index="{{$index}}">删除</a></td>
+        </tr>
+        {{/each}}
+    </script>
+    
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../lib/template-web.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>

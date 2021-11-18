@@ -1,0 +1,59 @@
+/* 9块9专区 */
+
+#nav {
+    ul {
+        :nth-child(1),:nth-child(3),:nth-child(4){
+            background: #43240c;
+            color: #fff;
+        }
+        :nth-child(2) {
+            /* 导航选中时的样式 */
+            background-color: #fee44e;
+            color: #43200c;
+        }
+    }
+}
+
+#zone {
+    position: relative;
+    height: 56px;
+    width: 1200px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #43200c;
+    background-color: #fef9dd;
+
+    p {
+        position: absolute;
+        left: 30px;
+        top: 0;
+    }
+}
+
+#zone-nav {
+    height: 56px;
+    width: 1200px;
+    background: #fff;
+
+    ul {
+        display: flex;
+        justify-content: start;
+
+        li {
+            cursor: pointer;
+            margin-bottom: 16px;
+            font-size: 18px;
+            line-height: 56px;
+            text-align: center;
+            color: #43240c;
+            padding: 0 17px;
+
+            &:hover {
+                border-bottom: 2px solid #000;
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,183 @@
+@charset "UTF-8";
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+  position: relative;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* 清浮动 */
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/* 浮动 */
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/* 头部 */
+#header {
+  height: 40px;
+  line-height: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e96262;
+  margin-bottom: 10px;
+}
+
+#header img {
+  width: 35px;
+  height: 35px;
+}
+
+#header h2 {
+  font-size: 28px;
+  margin-left: 15px;
+}
+
+#header p,
+#header a {
+  font-size: 12px;
+  color: #7e7e7e;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+#header a:hover {
+  color: #5959d6;
+  cursor: pointer;
+}
+
+/* 商品列表 */
+#product-show {
+  background: #fff;
+  padding-bottom: 20px;
+}
+
+#product-show table tr {
+  line-height: 100px;
+  text-align: center;
+  border-bottom: 1px dashed silver;
+}
+
+#product-show table tr :nth-child(1) {
+  width: 60px;
+}
+
+#product-show table tr :nth-child(2) {
+  width: 400px;
+  text-align: left;
+}
+
+#product-show table tr :nth-child(3) {
+  width: 100px;
+}
+
+#product-show table tr :nth-child(4) {
+  width: 250px;
+}
+
+#product-show table tr :nth-child(5) {
+  width: 100px;
+}
+
+#product-show table tr td img {
+  width: 50px;
+  margin-right: 5px;
+}
+
+#product-show table tr td input[name='minus'],
+#product-show table tr td input[name='plus'] {
+  width: 20px;
+  text-align: center;
+  background-color: #f1ebeb;
+  margin-right: -5px;
+}
+
+#product-show table tr td input[name='amount'] {
+  width: 50px;
+  text-align: center;
+}
+
+#product-show table tr td .deleteBtn {
+  color: #868686;
+}
+
+#product-show table tr .title {
+  position: relative;
+}
+
+#product-show table tr .title span {
+  position: absolute;
+  top: 5px;
+  display: inline-block;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#product-show table tr .singleprice,
+#product-show table tr .price {
+  color: #ee4444;
+}
+
+/* 结算 */
+#settlement {
+  margin-top: 20px;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  color: #b1b0b0;
+  font-size: 12px;
+}
+
+#settlement .wrap .shopping {
+  font-size: 14px;
+  margin: 20px;
+  color: #7075a0;
+  cursor: pointer;
+}
+
+#settlement .wrap .shopping:hover {
+  color: #f36d6d;
+}
+
+#settlement .wrap :nth-child(2) {
+  color: #f36969;
+}
+
+#settlement .wrap :nth-child(2) span {
+  font-size: 16px;
+  color: #f36969;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#settlement .wrap :nth-child(2) button {
+  margin-left: 10px;
+  border: none;
+  background: #f36969;
+  color: #fff;
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+}
